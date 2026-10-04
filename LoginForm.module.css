@@ -1,0 +1,74 @@
+.pageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  font-family: sans-serif;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.title {
+  color: #444;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.inputValid {
+  border-color: #28a745;
+}
+
+.inputInvalid {
+  border-color: #dc3545;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.checkboxText {
+  font-size: 13px;
+  color: #666;
+  margin-left: 8px;
+}
+
+.submitBtn {
+  width: 100%;
+  background-color: #72e2ae;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.submitBtn:hover {
+  background-color: #5cd09c;
+}
