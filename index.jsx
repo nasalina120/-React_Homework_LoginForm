@@ -56,6 +56,39 @@ export default class LoginForm extends Component {
     });
   };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    const {
+      isFullNameValid,
+      isEmailValid,
+      isPasswordValid,
+      isPasswordConfValid,
+      isAgreed,
+    } = this.state;
+
+    if (
+      isFullNameValid &&
+      isEmailValid &&
+      isPasswordValid &&
+      isPasswordConfValid &&
+      isAgreed
+    ) {
+      console.log("Account create ", this.state);
+
+      this.setState({
+        ...INITIAL_VALUES,
+        isAgreed: false,
+        isFullNameValid: false,
+        isEmailValid: false,
+        isPasswordValid: false,
+        isPasswordConfValid: false,
+      });
+    } else {
+      console.log("Error: Form is invalid");
+    }
+  };
+
   render() {
     const {
       fullName,
