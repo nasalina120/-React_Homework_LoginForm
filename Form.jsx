@@ -12,8 +12,7 @@ export default function Form({ data, classNames, handlers }) {
   } = classNames;
 
   const {
-    handleFullNameChange,
-    handleEmailChange,
+    handleChange,
     handlePasswordChange,
     handlePasswordConfChange,
     handleCheckboxChange,
@@ -30,7 +29,7 @@ export default function Form({ data, classNames, handlers }) {
           placeholder="Full Name"
           value={fullName}
           className={fullNameClassName}
-          onChange={handleFullNameChange}
+          onChange={handleChange}
           autoFocus
         />
       </label>
@@ -43,7 +42,7 @@ export default function Form({ data, classNames, handlers }) {
           placeholder="Email Address"
           value={email}
           className={emailClassName}
-          onChange={handleEmailChange}
+          onChange={handleChange}
         />
       </label>
 

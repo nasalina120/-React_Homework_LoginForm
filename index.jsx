@@ -23,17 +23,17 @@ export default class LoginForm extends Component {
     };
   }
 
-  handleFullNameChange = ({ target: { value } }) => {
-    this.setState({
-      fullName: value,
-      isFullNameValid: SIGNUPFORM_REG.fullName.test(value),
-    });
-  };
+  handleChange = ({ target: { name, value } }) => {
+    const validFieldsMap = {
+      fullName: "isFullNameValid",
+      email: "isEmailValid",
+    };
 
-  handleEmailChange = ({ target: { value } }) => {
+    const validKey = validFieldsMap[name];
+
     this.setState({
-      email: value,
-      isEmailValid: SIGNUPFORM_REG.email.test(value),
+      [name]: value,
+      [validKey]: SIGNUPFORM_REG[name].test(value),
     });
   };
 
@@ -128,8 +128,8 @@ export default class LoginForm extends Component {
     };
 
     const handlers = {
-      handleFullNameChange: this.handleFullNameChange,
-      handleEmailChange: this.handleEmailChange,
+      handleChange: this.handleChange,
+
       handlePasswordChange: this.handlePasswordChange,
       handlePasswordConfChange: this.handlePasswordConfChange,
       handleCheckboxChange: this.handleCheckboxChange,
