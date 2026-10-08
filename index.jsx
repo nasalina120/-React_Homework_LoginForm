@@ -41,6 +41,9 @@ export default class LoginForm extends Component {
     this.setState({
       password: value,
       isPasswordValid: SIGNUPFORM_REG.password.test(value),
+      isPasswordConfValid:
+        value === this.state.passwordConf &&
+        SIGNUPFORM_REG.passwordConf.test(this.state.passwordConf),
     });
   };
 
